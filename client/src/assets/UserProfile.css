@@ -1,0 +1,20 @@
+.profile-card {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.card {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+}
+.float-right {
+    float: right;
+}

@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "d646b548-cd5b-4fff-aca3-cad964e1c099",
+		"name": "testTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjcyNTI1MjI3LCJleHAiOjE2NzI2MTE2Mjd9.JOYPGchjO0K4YF9RBpJDuvI9TjvR0q-0NRBF_PnO74g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bilal12",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1234",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "dubai",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mbilal.dev19@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mac/Documents/thumbnail_WhatsApp Image 2022-08-31 at 9.07.56 PM.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"test12345\",\n    \"email\":\"mbilal.dev19@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGYzMWNiOWRmNTg1YTI5YjE0ZDE4ODgiLCJpYXQiOjE2OTM2NTQyNTV9.nQ-GXD3k3-Ib33W_QT7OhCcrikC5X_Ikvi_KVyDBWzM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bilal12",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test12345",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "dubai",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mac/Documents/thumbnail_WhatsApp Image 2022-08-31 at 9.07.56 PM.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/64f31cb9df585a29b14d1888",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"64f31cb9df585a29b14d1888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGYzMWNiOWRmNTg1YTI5YjE0ZDE4ODgiLCJpYXQiOjE2OTM2NTQyNTV9.nQ-GXD3k3-Ib33W_QT7OhCcrikC5X_Ikvi_KVyDBWzM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bilal12",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test12345",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "dubai",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mac/Documents/thumbnail_WhatsApp Image 2022-08-31 at 9.07.56 PM.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/64f31cb9df585a29b14d1888",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"64f31cb9df585a29b14d1888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGYzMWNiOWRmNTg1YTI5YjE0ZDE4ODgiLCJpYXQiOjE2OTM2NTQyNTV9.nQ-GXD3k3-Ib33W_QT7OhCcrikC5X_Ikvi_KVyDBWzM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bilal12",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test12345",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "dubai",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mac/Documents/thumbnail_WhatsApp Image 2022-08-31 at 9.07.56 PM.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/64f31cb9df585a29b14d1888",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"64f31cb9df585a29b14d1888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGYzMWNiOWRmNTg1YTI5YjE0ZDE4ODgiLCJpYXQiOjE2OTM2NTQyNTV9.nQ-GXD3k3-Ib33W_QT7OhCcrikC5X_Ikvi_KVyDBWzM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bilal12",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test12345",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "dubai",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mac/Documents/thumbnail_WhatsApp Image 2022-08-31 at 9.07.56 PM.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/64f31cb9df585a29b14d1888",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"64f31cb9df585a29b14d1888"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
