@@ -61,7 +61,30 @@ router.post('/', authMiddleware, upload.single('image'), async (req, res) => {
 router.get('/', authMiddleware, async (req, res) => {
     try {
         const users = await User.find();
-        res.json(users);
+        const page = parseInt(req.query.page) || 1;
+        const pageSize = parseInt(req.query.pageSize) || 10;
+
+        const startIndex = (page - 1) * pageSize;
+        const endIndex = page * pageSize;
+
+        const usersSubset = users.slice(startIndex, endIndex);
+        const usersList = usersSubset.map(user => {
+            return {
+                _id: user._id,
+                name: user.name,
+                email: user.email,
+                phone: user.phone,
+                address: user.address,
+                image: user.imageUrl
+            }
+        })
+
+        // Include the total number of users in the response
+        res.json({
+            users: usersList,
+            totalUsers: users.length,
+        });
+
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

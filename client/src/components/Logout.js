@@ -31,9 +31,6 @@ const Logout = () => {
     };
     return (
         <>
-            <button onClick={handleLogout} className="btn btn-secondary">
-                Logout
-            </button>
             <Modal
                 show={confirmDelete}
                 onHide={() => setConfirmDelete(false)}
@@ -52,7 +49,19 @@ const Logout = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <button onClick={() => setConfirmDelete(true)} className="btn btn-danger">
+            <button style={{margin: '5px'}} onClick={() => history.push('profile')} className="btn btn-danger">
+                My Profile
+            </button>
+            <button style={{margin: '5px'}}  onClick={() => history.push('update-profile')} className="btn btn-danger">
+                Edit My Profile
+            </button>
+            <button style={{margin: '5px'}}  onClick={() => history.push('users')} className="btn btn-danger">
+                See All Users
+            </button>
+            <button style={{margin: '5px'}} onClick={handleLogout} className="btn btn-secondary">
+                Logout
+            </button>
+            <button style={{margin: '5px'}} onClick={() => setConfirmDelete(true)} className="btn btn-danger">
                 Delete My Profile
             </button>
         </>

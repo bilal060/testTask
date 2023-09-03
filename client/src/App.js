@@ -10,6 +10,7 @@ import UpdateProfile from './components/UpdateProfile';
 import ProtectedRoute from './components/ProtectedRoute'; // Import the ProtectedRoute component
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/style.css'
+import UserList from "./components/UserList";
 const App = () => {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user);
@@ -44,6 +45,7 @@ const App = () => {
                     {/* Protected route: Only accessible when logged in */}
                     <ProtectedRoute path="/profile" component={UserProfile} />
                     <ProtectedRoute path="/update-profile" component={UpdateProfile} />
+                    <ProtectedRoute path="/users" component={UserList} />
                     {user ? (
                         <UserProfile/>
                     ) : (

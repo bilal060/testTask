@@ -39,13 +39,6 @@ const UserProfile = () => {
             <div className="profile-card">
                 <Card>
                     <Card.Header as="h5">User Profile
-                        <button
-                            className="float-right edit-button"
-                            onClick={handleEditProfile}
-                            title="Edit Profile"
-                        >
-                            <FontAwesomeIcon icon={faEdit} />
-                        </button>
                     </Card.Header>
 
                     <Card.Body>

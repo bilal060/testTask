@@ -44,3 +44,19 @@ export const deleteUserProfile = async ( id) => {
         throw error; // Handle errors as needed (e.g., logging, displaying an error message)
     }
 };
+export const fetchAllUserProfile = async (currentPage,usersPerPage) => {
+    try {
+        const token = localStorage.getItem('token'); // Get the token from wherever you store it
+
+        const headers = {
+            Authorization: `Bearer ${token}`, // Include the token in the headers
+        };
+
+        // Make the PUT request to the update profile endpoint
+        const response = await axios.get(`${API_URL}/users/?page=${currentPage}&pageSize=${usersPerPage}`, { headers });
+
+        return response.data; // Return the updated user data from the API response
+    } catch (error) {
+        throw error; // Handle errors as needed (e.g., logging, displaying an error message)
+    }
+};

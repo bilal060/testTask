@@ -11,10 +11,11 @@
 }
 
 .card {
-    width: 300px;
+    width: 380px;
     margin: 0 auto;
     text-align: left;
 }
 .float-right {
     float: right;
+    margin: 5px;
 }
